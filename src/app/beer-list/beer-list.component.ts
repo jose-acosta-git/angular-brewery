@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Beer } from './Beer';
 
 @Component({
   selector: 'app-beer-list',
@@ -7,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeerListComponent implements OnInit {
 
-  beer = {
-    "name": "Negra Juerte",
-    "type": "Porter",
-    "price": 123,
-    "stock": 5,
-    "image": "assets/img/porter.jpeg"
+  beer: Beer = {
+    name: 'Negra Juerte',
+    type: 'Porter',
+    price: 123,
+    stock: 5,
+    image: 'assets/img/porter.jpeg'
   }
 
   constructor() { }
