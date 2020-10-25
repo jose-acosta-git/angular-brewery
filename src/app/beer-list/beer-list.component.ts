@@ -8,13 +8,32 @@ import { Beer } from './Beer';
 })
 export class BeerListComponent implements OnInit {
 
-  beer: Beer = {
-    name: 'Negra Juerte',
-    type: 'Porter',
-    price: 123,
+  beers: Beer[] = [
+    {
+    name: 'Bitter Call Saul',
+    type: 'IPA',
+    price: 180,
     stock: 5,
-    image: 'assets/img/porter.jpeg'
-  }
+    image: 'assets/img/porter.jpeg',
+    clearance: false,
+    },
+    {
+    name: 'Red Red Wine',
+    type: 'Barley Wine',
+    price: 200,
+    stock: 3,
+    image: 'assets/img/porter.jpeg',
+    clearance: true,
+    },
+    {
+      name: 'Yellow Submarine',
+      type: 'Golden Ale',
+      price: 180,
+      stock: 0,
+      image: 'assets/img/porter.jpeg',
+      clearance: false,
+    }
+  ];
 
   constructor() { }
 
