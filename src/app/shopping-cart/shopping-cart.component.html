@@ -1,31 +1,6 @@
 <h1>Carrito de compras</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><img width="100" [src]="cart[0].image" [alt]="cart[0].name"></td>
-            <td>{{cart[0].name}}</td>
-            <td>{{cart[0].type}}</td>
-            <td>{{cart[0].price}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+<ul>
+    <li *ngFor="let beer of (cartList$ | async)">
+        {{beer.name}}: {{beer.quantity}}
+    </li>
+</ul>
